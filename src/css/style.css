@@ -1,0 +1,27 @@
+body{
+    /* background-color: blueviolet; */
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+
+    background-color: #ffffff;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+/* --------- Configurações do Scroll --------- */
+::-webkit-scrollbar{
+    display: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(138, 138, 138);
+    border-radius: 10px;
+}
