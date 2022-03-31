@@ -19,6 +19,7 @@ function LoginRequirement({ setToken }){
         });
         promise.then(response => {
             setToken(response.data.token);
+            console.log(response.data)
             navigate("/hoje");
         });
         promise.catch(error => console.log(error.response));
@@ -44,14 +45,14 @@ function LoginRequirement({ setToken }){
                         value={password}
                         name="password"
                     />
-                    <button></button>{/*Falta colocar o 'onClick'*/}
+                    <button type="submit" onClick={handleLogin}>Entrar</button>{/*Falta colocar o 'onClick'*/}
                 </DataInput>
             </form>
         </div>
     );
 }
 
-export default function Login(){
+export default function Login({ setToken }){
     return(
         <Container>
             <TopLogo>
@@ -60,7 +61,7 @@ export default function Login(){
             </TopLogo>
 
             <UserInteraction>
-                <LoginRequirement/>
+                <LoginRequirement setToken={setToken}/>
 
                 <CreateAccount>
                     <Link to="/cadastro">

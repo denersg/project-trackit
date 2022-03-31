@@ -16,7 +16,11 @@ function RequestRegistration(){
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
+    const navigate = useNavigate();
 
+    /* Na tela de cadastro ainda não vai ser mostrado o TOKEN,
+       quando eu der 'console.log(response.data)'. Ele só será
+       mostrado quando eu fizer Login. */
     function handleSignUp(e){
         e.preventDefault();
 
@@ -26,7 +30,10 @@ function RequestRegistration(){
             image,
             password
         });
-        promise.then(response => console.log(response));
+        promise.then(response => {
+            console.log(response.data);
+            navigate("/");
+        });
         promise.catch(error => console.log(error.response));
     }
 
@@ -62,7 +69,7 @@ function RequestRegistration(){
                     name="image"
                 />
                 {/* Botão de Cadastro */}
-                <button>Cadastrar</button>
+                <button type="submit" onClick={handleSignUp}>Cadastrar</button>
             </DataInput>
         </form>
     );
