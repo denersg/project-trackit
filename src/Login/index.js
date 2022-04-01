@@ -1,11 +1,16 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import { ThreeDots } from "react-loader-spinner";
 
 import Up from "../assets/up.png";
-import { Container, TopLogo, UserInteraction, DataInput, CreateAccount } from "./style.js";
+import {
+    Container,
+    TopLogo,
+    UserInteraction,
+    DataInput,
+    CreateAccount
+} from "./style.js";
 
 function LoginRequirement({ setToken }){
     const [email, setEmail] = useState("");

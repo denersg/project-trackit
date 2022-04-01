@@ -72,6 +72,11 @@ export const DataInput = styled.div`
         outline: none;
     }
 
+    input:disabled{
+        color: #AFAFAF;
+        background-color: #F2F2F2;
+    }
+
     input::placeholder{
         color: #dbdbdb;
     }

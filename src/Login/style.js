@@ -65,11 +65,14 @@ export const DataInput = styled.div`
 
         outline: none;
     }
-    input[type="email"]:disabled{
-        background-color: rgba(229, 229, 229, 0.5);
+
+    input:disabled{
+        color: #AFAFAF;
     }
+    //Especificando os inputs onde ocorrerá a mudança
+    input[type="email"]:disabled,
     input[type="password"]:disabled{
-        background-color: rgba(229, 229, 229, 0.5);
+        background-color: #F2F2F2;
     }
 
     input::placeholder{
