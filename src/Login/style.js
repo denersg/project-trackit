@@ -68,6 +68,9 @@ export const DataInput = styled.div`
     input[type="email"]:disabled{
         background-color: rgba(229, 229, 229, 0.5);
     }
+    input[type="password"]:disabled{
+        background-color: rgba(229, 229, 229, 0.5);
+    }
 
     input::placeholder{
         color: #dbdbdb;
@@ -86,10 +89,6 @@ export const DataInput = styled.div`
         line-height: 26px;
         color: #fff;
     }
-`;
-
-export const ThreeDots = styled.div`
-    background-color: hotpink;
 `;
 
 export const CreateAccount = styled.div`

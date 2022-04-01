@@ -38,7 +38,7 @@ function RequestRegistration(){
     }
 
     return(
-        <form>
+        <form> {/* Adicionar o método 'onSubmit' */}
             <DataInput>
                 <input
                     type="email"
