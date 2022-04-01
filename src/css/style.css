@@ -2,9 +2,9 @@ body{
     /* background-color: blueviolet; */
     height: 100vh;
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 
     font-family: 'Lexend Deca', sans-serif;
     font-style: normal;

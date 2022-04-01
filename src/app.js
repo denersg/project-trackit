@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from "./Login";
 import Register from "./Register";
+import Header from './Header';
 import Today from "./Today";
 // import Cadastro from "./Cadastro/cadastro";
 // import Hoje from "./Hoje/hoje";
