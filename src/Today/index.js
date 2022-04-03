@@ -1,4 +1,5 @@
 import Header from "../Header";
+import Footer from "../Footer";
 
 export default function Today(){
     return(
@@ -14,6 +15,7 @@ export default function Today(){
             Ut ad est obcaecati placeat beatae! Eum perferendis, enim,
             soluta, praesentium aperiam omnis doloremque sint ipsa
             aliquid iusto quisquam minima quos. Corrupti?
+            <Footer/>
         </div>
     );
 }
