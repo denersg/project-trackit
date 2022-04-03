@@ -2,18 +2,16 @@ import axios from "axios";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
+
 import UserContext from "../contexts/UserContext";
 
 import Up from "../assets/up.png";
 import {
-    Container,
-    TopLogo,
-    UserInteraction,
-    DataInput,
-    CreateAccount
+    Container, TopLogo,
+    UserInteraction, DataInput, CreateAccount
 } from "./style.js";
 
-function LoginRequirement(/*{ setToken }*/){
+function LoginRequirement(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loader, setLoader] = useState(false);
@@ -31,15 +29,18 @@ function LoginRequirement(/*{ setToken }*/){
             password
         });
         promise.then(response => {
-            setUser({
+            //Persistência dos dados no 'localStorage'
+            localStorage.setItem('user', JSON.stringify({
                 id: response.data.id,
                 name: response.data.name,
                 image: response.data.image,
                 email: response.data.email,
                 password: response.data.password,
                 token: response.data.token
-            });
-            console.log(response.data)
+            }));
+            setUser(JSON.parse(localStorage.getItem("user")));
+            
+            // console.log(response.data)
             navigate("/hoje");
         });
         promise.catch(error => {
@@ -81,7 +82,7 @@ function LoginRequirement(/*{ setToken }*/){
     );
 }
 
-export default function Login(/*{ setToken }*/){
+export default function Login(){
     return(
         <Container>
             <TopLogo>
@@ -90,7 +91,7 @@ export default function Login(/*{ setToken }*/){
             </TopLogo>
 
             <UserInteraction>
-                <LoginRequirement /*setToken={setToken}*//>
+                <LoginRequirement />
 
                 <CreateAccount>
                     <Link to="/cadastro">
