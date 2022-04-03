@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
+import UserContext from "../contexts/UserContext";
 
 import Up from "../assets/up.png";
 import {
@@ -12,12 +13,13 @@ import {
     CreateAccount
 } from "./style.js";
 
-function LoginRequirement({ setToken }){
+function LoginRequirement(/*{ setToken }*/){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loader, setLoader] = useState(false);
     const [isDisabled, setIsDisabled] = useState(false);
     const navigate = useNavigate();
+    const { setUser } = useContext(UserContext);
 
     function handleLogin(e){
         e.preventDefault();
@@ -29,7 +31,14 @@ function LoginRequirement({ setToken }){
             password
         });
         promise.then(response => {
-            setToken(response.data.token);
+            setUser({
+                id: response.data.id,
+                name: response.data.name,
+                image: response.data.image,
+                email: response.data.email,
+                password: response.data.password,
+                token: response.data.token
+            });
             console.log(response.data)
             navigate("/hoje");
         });
@@ -72,7 +81,7 @@ function LoginRequirement({ setToken }){
     );
 }
 
-export default function Login({ setToken }){
+export default function Login(/*{ setToken }*/){
     return(
         <Container>
             <TopLogo>
@@ -81,7 +90,7 @@ export default function Login({ setToken }){
             </TopLogo>
 
             <UserInteraction>
-                <LoginRequirement setToken={setToken}/>
+                <LoginRequirement /*setToken={setToken}*//>
 
                 <CreateAccount>
                     <Link to="/cadastro">
