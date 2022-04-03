@@ -1,15 +1,22 @@
+import { useNavigate } from "react-router-dom";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
 import { BottomBar, Content } from "./style.js";
 
 export default function Footer(){
+    const navigate = useNavigate();
     const percentage = 66;
+    
+    function goToRoute(rota){
+        navigate(rota);
+    }
+    
     return(
         <BottomBar>
             <Content>
-                <span>Hábitos</span>
+                <span className="cursor" onClick={() => goToRoute("/habitos")}>Hábitos</span>
                 <div>
-                    <p style={{ /*width: 91, height: 91, position: "absolute"*/ }}>
+                    <p>
                         <CircularProgressbar
                             value={percentage}
                             text={``}
@@ -28,10 +35,10 @@ export default function Footer(){
                                 backgroundColor: '#fff',
                             })}
                         />
-                        <span>Hoje</span>
+                        <span className="cursor" onClick={() => goToRoute("/hoje")}>Hoje</span>
                     </p>
                 </div>
-                <span>Histórico</span>
+                <span className="cursor" onClick={() => goToRoute("/historico")}>Histórico</span>
             </Content>
         </BottomBar>
     );

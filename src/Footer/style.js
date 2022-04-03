@@ -24,6 +24,8 @@ export const Content = styled.div`
     justify-content: space-between;
 
     span{
+        z-index: 2;
+        
         font-weight: 400;
         font-size: 17.976px;
         line-height: 22px;
