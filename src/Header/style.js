@@ -17,7 +17,6 @@ export const TopBar = styled.header`
 `;
 
 export const Content = styled.div`
-    /* background-color: yellow; */
     width: 95%;
 
     display: flex;

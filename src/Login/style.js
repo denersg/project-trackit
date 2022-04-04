@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    /* background-color: hotpink; */
     height: 100vh;
 
     display: flex;
@@ -11,12 +10,10 @@ export const Container = styled.div`
 `;
 
 export const UserInteraction = styled.div`
-    /* background-color: orange; */
     height: 199px;
 `;
 
 export const TopLogo = styled.div`
-    /* background-color: violet; */
     width: 180px;
     height: 220px;
     
@@ -30,8 +27,6 @@ export const TopLogo = styled.div`
     }
 
     span{
-        /* background-color: green; */
-
         margin-bottom: 50px;
 
         font-family: Playball;
@@ -43,7 +38,6 @@ export const TopLogo = styled.div`
 `;
 
 export const DataInput = styled.div`
-    /* background-color: red; */
     width: 305px;
     height: 147px;
 
@@ -98,7 +92,6 @@ export const DataInput = styled.div`
 `;
 
 export const CreateAccount = styled.div`
-    /* background-color: pink; */
     height: 50px;
     
     display: flex;

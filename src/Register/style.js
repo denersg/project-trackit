@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    /* background-color: hotpink; */
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
 export const UserInteraction = styled.div`
-    /* background-color: orange; */
     height: 199px;
 
     position: absolute;
@@ -16,7 +14,6 @@ export const UserInteraction = styled.div`
 `;
 
 export const TopLogo = styled.div`
-    /* background-color: violet; */
     width: 180px;
     height: 220px;
 
@@ -33,8 +30,6 @@ export const TopLogo = styled.div`
     }
 
     span{
-        /* background-color: green; */
-
         margin-bottom: 50px;
 
         font-family: Playball;
@@ -46,7 +41,6 @@ export const TopLogo = styled.div`
 `;
 
 export const DataInput = styled.div`
-    /* background-color: red; */
     width: 305px;
     height: 250px;
 
@@ -97,7 +91,6 @@ export const DataInput = styled.div`
 `;
 
 export const GoToLogin = styled.div`
-    /* background-color: pink; */
     height: 50px;
     
     display: flex;

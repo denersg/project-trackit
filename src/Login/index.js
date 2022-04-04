@@ -40,7 +40,6 @@ function LoginRequirement(){
             }));
             setUser(JSON.parse(localStorage.getItem("user")));
             
-            // console.log(response.data)
             navigate("/hoje");
         });
         promise.catch(error => {

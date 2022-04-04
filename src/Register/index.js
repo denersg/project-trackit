@@ -21,9 +21,6 @@ function RequestRegistration(){
     const [isDisabled, setIsDisabled] = useState(false);
     const navigate = useNavigate();
 
-    /* Na tela de cadastro ainda não vai ser mostrado o TOKEN,
-       quando eu der 'console.log(response.data)'. Ele só será
-       mostrado quando eu fizer Login. */
     function handleSignUp(e){
         e.preventDefault();
         setLoader(true);
